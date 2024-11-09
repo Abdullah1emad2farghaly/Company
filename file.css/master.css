@@ -1,0 +1,308 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box  ;
+}
+
+:root {
+    --orange-color: #f4511e;
+    --background-color: #f6f6f6;
+    --title-color: #3a3a3a;
+}
+/* start navbar */
+#navbar {
+    background-color: var(--orange-color);
+    position: fixed;
+    top: 0;
+    right: 0;
+    margin: auto;
+    z-index: 10;
+    width: 100%;
+    /* height: 50px; */
+
+}
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    background-color: var(--orange-color);
+}
+#navbar .navbtn {
+    position: fixed;
+    right: 5px;
+    top: 0px;
+    padding: 0px 0 0 0px;
+    width: 40px;
+    height: 40px;
+    margin: 5px 5px 0  0;
+    font-size: 25px;
+    color: #999999;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+#navbar .navbtn:hover {
+    background-color: #EEE;
+}
+
+.menu {
+    border-top: 1px #EEE solid;
+    background-color: var(--orange-color);
+    /* height: 55vh; */
+    width: 100%;
+    position: relative;
+    margin-top: 50px;
+    /* top: 100px; */
+    z-index: 5;
+}
+.menu div {
+
+    
+}
+.menu div a {
+    display: block;
+    text-decoration: none;
+    color: white;
+    font-size: 14px;
+    letter-spacing: 3px;
+    width: 100%;
+    padding: 15px 15px;
+}
+.menu div a:hover {
+    background-color: white;
+    color: var(--orange-color);
+}
+#navbar li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#navbar a:not(.logo,.navbtn){
+    padding: 15px 13px;
+    letter-spacing: 5px;
+    color: white;
+    font-size: 13px;
+}
+.logo1 {
+    padding: 10px 0 10px;
+}
+.logo {
+    font-size: 20px;
+    letter-spacing: 4px;
+    color: white;
+}
+#navbar a:not(.logo,.navbtn):hover {
+    background-color: var(--background-color);
+    color: var(--orange-color);
+}
+/* 
+#about:hover ~ #navbar a[href="#about"],
+#services:hover ~ #navbar a[href="#services"],
+#portfolio:hover ~ #navbar a[href="#portfolio"],
+#pricing:hover ~ #navbar a[href="#pricing"],
+#contact:hover ~ #navbar a[href="#contact"] {
+    background-color: white;
+    color: var(--orange-color);
+} */
+/* end-navbar */
+
+/* start landing */
+.content {
+    height: 60vh;
+    color: white;
+}
+.landing {
+    background-color: var(--orange-color);
+}
+.landing .content h1 {
+    font-size: 70px;
+}
+.landing .content p:not(p:first-child){
+    font-size: 20px;
+}
+.email {
+    border: 1px #999999 solid;
+}
+.email input,
+.email button {
+    margin: 0;
+    border: none;
+    padding: 5px 7px;
+    outline: none;
+}
+.email input:focus {
+    box-shadow: 0px 0px 1px 1px #3fd7f5;
+}
+.email button {
+    left: 0.6px; 
+    background-color: #d9534f;
+    color: white;
+    border: 1px solid #bd3934;
+}
+.email button:hover {
+    background-color: #d43f3a;
+}
+/* end landing  */
+/* start about */
+.about .section button {
+    padding: 10px 20px;
+    border: 1px #999999 solid;
+    border-radius: 5px;
+    -webkit-border-radius: 5px; 
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    background-color: white;
+}
+.about .section button:hover {
+    background-color: #EEEE;
+}
+h2 {
+    color: var(--title-color);
+}
+/* end about */
+/* start our-values */
+.our-values {
+    background-color: #EEEEEE;
+}
+.our-values .fontawsome {
+    position: relative;
+    font-size: 200px;
+    color: var(--orange-color);
+    /* top: 110px; */
+    animation-name: top1;
+    animation-duration: 1s;
+}
+@keyframes top1 {
+    0% {
+        top: 200px;
+        opacity: 0;
+    }
+    100% {
+        top: 0;
+        opacity: 1;
+    }
+}
+.our-values .our-content p:not(p:last-child){
+    font-size: 19px;
+}
+/* end our-values */
+/* start services */
+.services .row .fontawsome {
+    font-size: 50px;
+    color: var(--orange-color);
+    position: relative;
+}
+.services .container,
+.portfolio .row,
+.pricing .row,
+.contact .inputs {
+    position: relative;
+}
+.services {
+    overflow: hidden;
+}
+.services .container,
+.portfolio .row,
+.pricing .row,
+.contact .inputs {
+    animation-name: top2;
+    animation-duration: 1s;
+}
+@keyframes top2 {
+    0% {
+        top: 200px;
+        opacity: 0;
+    }
+    100% {
+        top: 0;
+        opacity: 1;
+    }
+}
+/* end services */
+
+
+
+/* start portfolio */
+.portfolio {
+    background-color: #EEEEEE;
+    overflow: hidden;
+}
+/* end portfolio */
+
+/* start pricing */
+/* start pricing */
+.pricing .basic .parent:hover {
+    box-shadow: 0 0 22px 4px #aaaa;
+}
+.pricing .basic .parent {
+    border: 1px var(--orange-color) solid;
+    transition: 0.6s;
+    -webkit-transition: 0.6s;
+    -moz-transition: 0.6s;
+    -ms-transition: 0.6s;
+    -o-transition: 0.6s;
+}
+.pricing .basic .parent>h2 {
+    background-color: var(--orange-color);
+    color: white;
+}
+.pricing .basic .parent button {
+    background-color: var(--orange-color);
+    color: white;
+    border: none;
+    font-size: 20px;
+    border: 1px var(--orange-color) solid;
+    padding: 10px 20px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+.pricing .basic .parent button:hover {
+    background-color: white;
+    color: var(--orange-color);
+}
+/* end pricing */
+
+/* start contact */
+.contact {
+    background-color: #EEE;
+}
+.contact .inputs input,
+.contact .inputs textarea {
+    border: 1px #aaaaaa solid;
+}
+.contact .inputs input:focus,
+.contact .inputs textarea:focus {
+    box-shadow: 0 0 3px 0.2px #0da8f0 !important;
+    border-color: #0dcaf0;
+}
+.contact .inputs .text-end button {
+    padding: 5px 10px;
+    border: 1px #999999 solid;
+    background-color: white;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}.contact .inputs .text-end button:hover {
+    background-color: #cccccc;
+}
+/* end contact */
+
+/* start footer */
+footer a {
+    text-decoration: none;
+}
+footer>a {
+    font-size: 30px;
+    font-weight: 800;
+    color: var(--orange-color);
+}
+/* end footer */
